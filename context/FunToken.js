@@ -61,7 +61,7 @@ export const ERC20Provider = ({ children }) => {
       const connection = await web3modal.connect();
       const provider = new ethers.providers.Web3Provider(connection);
       const signer = provider.getSigner(
-        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+        "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
       );
       const contract = fetchContractERC20(signer);
 
@@ -88,7 +88,7 @@ export const ERC20Provider = ({ children }) => {
 
       //OWNER TOKEN BALANCE
       const balanceToken = await contract.balanceOf(
-        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+        "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
       );
       setTokenOwnerBal(balanceToken.toNumber());
     } catch (error) {
@@ -113,7 +113,7 @@ export const ERC20Provider = ({ children }) => {
     }
   };
 
-  //GET TOKEN HOLDER DATA
+  // GET TOKEN HOLDER DATA
   const tokenHolderData = async () => {
     try {
       const web3modal = new Web3Modal();
@@ -133,6 +133,9 @@ export const ERC20Provider = ({ children }) => {
       console.log("something wrong in getting data");
     }
   };
+
+
+
 
   return (
     <ERC20ICOContext.Provider
