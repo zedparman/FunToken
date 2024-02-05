@@ -90,7 +90,7 @@ export const ERC20Provider = ({ children }) => {
       const balanceToken = await contract.balanceOf(
         "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
       );
-      setTokenOwnerBal(balanceToken);
+      setTokenOwnerBal(balanceToken.toNumber());
     } catch (error) {
       console.log("Error in ERC20 token");
     }
@@ -141,6 +141,7 @@ export const ERC20Provider = ({ children }) => {
         ERC20FunToken, 
         transferToken, 
         tokenHolderData, 
+        holderArray,
         account, 
         accountBalance, 
         userId, 
