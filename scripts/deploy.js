@@ -2,11 +2,11 @@ const hre = require("hardhat");
 
 async function main() {
   const FunToken = await hre.ethers.getContractFactory("FunToken");
-  const funToken = await FunToken.deploy();
+  const funToken = await FunToken.deploy(100);
 
   await funToken.deployed();
 
-  console.log("funToken with 1 ETH deployed to:", funToken.address);
+  console.log("FunToken deployed with an initial supply of 100 tokens to:", funToken.address);
 }
 
 main().catch((error) => {
