@@ -1,7 +1,13 @@
-import React from "react";
+import Reac, { useState, useEffect, useContext } from 'react'
+import Image from "next/image";
+
+import {ERC20ICOContext} from "../context/FunToken";
 
 const Home = () => {
-  return <div>Home</div>;
-};
+  const { funToken } = useContext(ERC20ICOContext);
+  return (
+    <div>{funToken}</div>
+  )
+}
 
-export default Home;
+export default Home
