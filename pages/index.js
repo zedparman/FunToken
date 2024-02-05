@@ -4,9 +4,28 @@ import Image from "next/image";
 import {ERC20ICOContext} from "../context/FunToken";
 
 const Home = () => {
-  const { funToken } = useContext(ERC20ICOContext);
+  const { 
+    checkConnection, 
+    ERC20FunToken, 
+    transferToken, 
+    tokenHolderData, 
+    account, 
+    accountBalance, 
+    userId, 
+    NoOfToken, 
+    tokenName, 
+    tokenStandard, 
+    tokenSymbol, 
+    tokenOwner, 
+    tokenOwnerBal
+   } = useContext(ERC20ICOContext);
+
+   useEffect(() => {
+    checkConnection();
+    tokenHolderData();
+   })
   return (
-    <div>{funToken}</div>
+    <div>HOME</div>
   )
 }
 
