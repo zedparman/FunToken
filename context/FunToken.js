@@ -136,7 +136,21 @@ export const ERC20Provider = ({ children }) => {
 
   return (
     <ERC20ICOContext.Provider
-      value={{ checkConnection, ERC20FunToken, transferToken, tokenHolderData, account, accountBalance, userId, NoOfToke, TokenName, TokenStandard, TokenSymbol, TokenOwner, TokenOwnerBal }}
+      value={{ 
+        checkConnection, 
+        ERC20FunToken, 
+        transferToken, 
+        tokenHolderData, 
+        account, 
+        accountBalance, 
+        userId, 
+        NoOfToken, 
+        tokenName, 
+        tokenStandard, 
+        tokenSymbol, 
+        tokenOwner, 
+        tokenOwnerBal 
+      }}
     >
       {children}
     </ERC20ICOContext.Provider>
