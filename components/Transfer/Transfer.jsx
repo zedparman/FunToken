@@ -16,8 +16,8 @@ const Transfer = (
 }
 ) => {
 
-    useState[transferAccount, setTransferAccount] = useState('');
-    useState[tokenNumber, setTokenNumber] = useState(0);
+    const [transferAccount, setTransferAccount] = useState('');
+    const [tokenNumber, setTokenNumber] = useState(0);
   return (
     <div className={Style.transfer}>
         <div className={Style.transfer_box}>
@@ -38,7 +38,7 @@ const Transfer = (
                         </span>
                     </p>
                     <p>
-                        Token Left <span>{TokenOwnerBal}</span>
+                        Token Left <span>{tokenOwnerBal}</span>
                     </p>
                 </div>
             </div>
