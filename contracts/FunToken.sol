@@ -34,7 +34,7 @@ contract FunToken{
         bool _tokenHolder;
     }
 
-    constructor (uint256 _initialSuuply) {
+    constructor (uint256 _initialSuuply)  {
         ownerOfContract = msg.sender;
         balanceOf[msg.sender] = _initialSuuply;
         totalSupply = _initialSuuply;
